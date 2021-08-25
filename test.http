@@ -1,0 +1,130 @@
+GET http://localhost:5000
+
+// Users
+### Register user
+POST http://localhost:5000/users/register
+Content-Type: application/json
+
+{
+    "name": "Abdur Rahim",
+    "email": "abdoerrahiem@gmail.com",
+    "password": "123456"
+}
+
+### Send OTP
+POST http://localhost:5000/users/otp
+Content-Type: application/json
+
+{
+    "email": "abdoerrahiem@gmail.com"
+}
+
+### Vefiry user
+POST http://localhost:5000/users/verify
+Content-Type: application/json
+
+{
+    "email": "abdoerrahiem@gmail.com",
+    "otp": "lfrj4u"
+}
+
+### Login user
+POST http://localhost:5000/users/login
+Content-Type: application/json
+
+{
+    "email": "abdoerrahiem@gmail.com",
+    "password": "abdoerrahiem"
+}
+
+### Update name
+PUT http://localhost:5000/users/update/name
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMjBiYjE3OTE2MTc1MTdiMDE5YzRjMiIsImlhdCI6MTYyOTUzNzQwNywiZXhwIjoxNjMyMTI5NDA3fQ.57swjteBvhQyEGl0aNI3GS1SHclPOOMOXAUtneX8BwQ
+
+{
+    "name": "Abdur Rahim"
+}
+
+### Update birthdate
+PUT http://localhost:5000/users/update/birthdate
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMjBiYjE3OTE2MTc1MTdiMDE5YzRjMiIsImlhdCI6MTYyOTUzNzQwNywiZXhwIjoxNjMyMTI5NDA3fQ.57swjteBvhQyEGl0aNI3GS1SHclPOOMOXAUtneX8BwQ
+
+{
+    "birthdate": "16-12-1998"
+}
+
+### Update email
+PUT http://localhost:5000/users/update/email
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMjBiYjE3OTE2MTc1MTdiMDE5YzRjMiIsImlhdCI6MTYyOTUzNzQwNywiZXhwIjoxNjMyMTI5NDA3fQ.57swjteBvhQyEGl0aNI3GS1SHclPOOMOXAUtneX8BwQ
+
+{
+    "email": "abdoerrahiem@gmail.com"
+}
+
+### Update password
+PUT http://localhost:5000/users/update/password
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMjBiYjE3OTE2MTc1MTdiMDE5YzRjMiIsImlhdCI6MTYyOTUzNzQwNywiZXhwIjoxNjMyMTI5NDA3fQ.57swjteBvhQyEGl0aNI3GS1SHclPOOMOXAUtneX8BwQ
+
+{
+    "oldPassword": "abdoerrahiem2",
+    "newPassword": "abdoerrahiem"
+}
+
+### Update photo
+PUT http://localhost:5000/users/update/photo
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMjBiYjE3OTE2MTc1MTdiMDE5YzRjMiIsImlhdCI6MTYyOTUzNzQwNywiZXhwIjoxNjMyMTI5NDA3fQ.57swjteBvhQyEGl0aNI3GS1SHclPOOMOXAUtneX8BwQ
+
+{
+    "photo": "https://scontent.fpnk3-1.fna.fbcdn.net/v/t1.6435-9/56368677_836555680011041_1338138305639743488_n.jpg?_nc_cat=110&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeEfkPLAezFgH-sa1iSHcSPUikyRu5ecazaKTJG7l5xrNra_S6LDxXzjV4UCU6iwLUY65oR3uEbSDgzYHMROm9Q7&_nc_ohc=UBMMC4soiEwAX-4i4DV&_nc_ht=scontent.fpnk3-1.fna&oh=b62f1f3454f65fc220a0aa92db08be58&oe=61448C2C"
+}
+
+
+// Jobs
+### Get jobs
+GET http://localhost:5000/jobs
+
+### Get job
+GET http://localhost:5000/jobs/6120dafed46efa149447d948
+
+
+// Application
+### Create application
+POST http://localhost:5000/applications
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMjBiYjE3OTE2MTc1MTdiMDE5YzRjMiIsImlhdCI6MTYyOTYxNjI3OCwiZXhwIjoxNjMyMjA4Mjc4fQ.gJ_8oHYOPGz9Km2gKOZGBwm8H299A6p8VJKM4S1dYCE
+
+{
+    "phone": "+6289694624299",
+    "appLetter": "Hi, I am interested",
+    "location": "Mempawah, Indonesia",
+    "resume": "https://res.cloudinary.com/abdoerrahiem/image/upload/v1629616471/jobfinder/My_Resume_yr3cie.pdf",
+    "jobId": "6120dafed46efa149447d955",
+    "status": "review"
+}
+
+### Get my applications
+GET http://localhost:5000/applications
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMjM1ZDc4ZmIzZjRhMTY1NDE0NTllNCIsImlhdCI6MTYyOTc3MTU0MSwiZXhwIjoxNjMyMzYzNTQxfQ.eaCgxkatUCmJ-kjZTYaW_OWpz9kMdLnVbFrDQKt6LB0
+
+### Get application
+GET http://localhost:5000/applications/6121fb05691836111cf3c15f
+
+
+// Notifications
+### Get my notifications
+GET http://localhost:5000/notifications
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMjBiYjE3OTE2MTc1MTdiMDE5YzRjMiIsImlhdCI6MTYyOTYxNjI3OCwiZXhwIjoxNjMyMjA4Mjc4fQ.gJ_8oHYOPGz9Km2gKOZGBwm8H299A6p8VJKM4S1dYCE
+
+### Update notification
+PUT http://localhost:5000/notifications/6122021357f4101750e67ccb
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMjBiYjE3OTE2MTc1MTdiMDE5YzRjMiIsImlhdCI6MTYyOTYxNjI3OCwiZXhwIjoxNjMyMjA4Mjc4fQ.gJ_8oHYOPGz9Km2gKOZGBwm8H299A6p8VJKM4S1dYCE
+
+
+
+

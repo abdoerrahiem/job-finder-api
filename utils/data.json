@@ -1,0 +1,294 @@
+[
+  {
+    "title": "Product Designer",
+    "positions": [
+      { "position": "Fulltime" },
+      { "position": "Senior" },
+      { "position": "Design" }
+    ],
+    "company": "Google",
+    "location": "California",
+    "salary": 1000,
+    "companyDescription": "One of the pioneers of Indonesia online marketplace in the tech realm which has sold many hi-tech gadgets and innovative products since 2016",
+    "requirements": [
+      { "requirement": "You have excellent knowledge of UX and web design" },
+      { "requirement": "You know how developer works (additional points)" },
+      {
+        "requirement": "You have at least 3 years of experience in a similar role"
+      }
+    ],
+    "jobDescriptions": [
+      {
+        "jobDescription": "Implement and execute user testing and A/B testing"
+      },
+      {
+        "jobDescription": "Demonstrate your prototype / design results to user and stakeholder"
+      },
+      {
+        "jobDescription": "Formulate good design ideas and propose solutions to increased product usefulness"
+      }
+    ],
+    "skills": [
+      { "skill": "UI UX Design" },
+      { "skill": "Figma" },
+      { "skill": "UI Design" }
+    ],
+    "isFreelance": false,
+    "isNewer": false,
+    "image": "https://res.cloudinary.com/abdoerrahiem/image/upload/v1629513358/jobfinder/google_gjeohc.png",
+    "experience": "1 year"
+  },
+  {
+    "title": "UI Design",
+    "positions": [{ "position": "Intership" }, { "position": "Junio" }],
+    "company": "Dribble",
+    "location": "Singapore",
+    "salary": 2000,
+    "companyDescription": "One of the pioneers of Indonesia online marketplace in the tech realm which has sold many hi-tech gadgets and innovative products since 2016",
+    "requirements": [
+      { "requirement": "You have excellent knowledge of UX and web design" },
+      { "requirement": "You know how developer works (additional points)" },
+      {
+        "requirement": "You have at least 3 years of experience in a similar role"
+      }
+    ],
+    "jobDescriptions": [
+      {
+        "jobDescription": "Implement and execute user testing and A/B testing"
+      },
+      {
+        "jobDescription": "Demonstrate your prototype / design results to user and stakeholder"
+      },
+      {
+        "jobDescription": "Formulate good design ideas and propose solutions to increased product usefulness"
+      }
+    ],
+    "skills": [
+      { "skill": "UI UX Design" },
+      { "skill": "Figma" },
+      { "skill": "UI Design" }
+    ],
+    "isFreelance": false,
+    "isNewer": false,
+    "image": "https://res.cloudinary.com/abdoerrahiem/image/upload/v1629513357/jobfinder/dribble_zkvbfn.png",
+    "experience": "2 year"
+  },
+  {
+    "title": "Digital Marketing",
+    "positions": [{ "position": "Fulltime" }, { "position": "Senior" }],
+    "company": "Gojek",
+    "location": "Jakarta",
+    "salary": 500,
+    "companyDescription": "One of the pioneers of Indonesia online marketplace in the tech realm which has sold many hi-tech gadgets and innovative products since 2016",
+    "requirements": [
+      { "requirement": "You have excellent knowledge of UX and web design" },
+      { "requirement": "You know how developer works (additional points)" },
+      {
+        "requirement": "You have at least 3 years of experience in a similar role"
+      }
+    ],
+    "jobDescriptions": [
+      {
+        "jobDescription": "Implement and execute user testing and A/B testing"
+      },
+      {
+        "jobDescription": "Demonstrate your prototype / design results to user and stakeholder"
+      },
+      {
+        "jobDescription": "Formulate good design ideas and propose solutions to increased product usefulness"
+      }
+    ],
+    "skills": [
+      { "skill": "UI UX Design" },
+      { "skill": "Figma" },
+      { "skill": "UI Design" }
+    ],
+    "isFreelance": false,
+    "isNewer": true,
+    "image": "https://res.cloudinary.com/abdoerrahiem/image/upload/v1629513358/jobfinder/gojek_wiowqa.png",
+    "experience": "1-3 year"
+  },
+  {
+    "title": "Content Creator",
+    "positions": [{ "position": "Fulltime" }, { "position": "Internship" }],
+    "company": "Shopee",
+    "location": "Jakarta",
+    "salary": 800,
+    "companyDescription": "One of the pioneers of Indonesia online marketplace in the tech realm which has sold many hi-tech gadgets and innovative products since 2016",
+    "requirements": [
+      { "requirement": "You have excellent knowledge of UX and web design" },
+      { "requirement": "You know how developer works (additional points)" },
+      {
+        "requirement": "You have at least 3 years of experience in a similar role"
+      }
+    ],
+    "jobDescriptions": [
+      {
+        "jobDescription": "Implement and execute user testing and A/B testing"
+      },
+      {
+        "jobDescription": "Demonstrate your prototype / design results to user and stakeholder"
+      },
+      {
+        "jobDescription": "Formulate good design ideas and propose solutions to increased product usefulness"
+      }
+    ],
+    "skills": [
+      { "skill": "UI UX Design" },
+      { "skill": "Figma" },
+      { "skill": "UI Design" }
+    ],
+    "isFreelance": false,
+    "isNewer": true,
+    "image": "https://res.cloudinary.com/abdoerrahiem/image/upload/v1629513354/jobfinder/shopee_kq1c8k.png",
+    "experience": "1 year"
+  },
+  {
+    "title": "Frontend Dev",
+    "positions": [
+      { "position": "Fulltime" },
+      { "position": "Junior" },
+      { "position": "Internship" }
+    ],
+    "company": "Bukalapak",
+    "location": "Jakarta",
+    "salary": 1500,
+    "companyDescription": "One of the pioneers of Indonesia online marketplace in the tech realm which has sold many hi-tech gadgets and innovative products since 2016",
+    "requirements": [
+      { "requirement": "You have excellent knowledge of UX and web design" },
+      { "requirement": "You know how developer works (additional points)" },
+      {
+        "requirement": "You have at least 3 years of experience in a similar role"
+      }
+    ],
+    "jobDescriptions": [
+      {
+        "jobDescription": "Implement and execute user testing and A/B testing"
+      },
+      {
+        "jobDescription": "Demonstrate your prototype / design results to user and stakeholder"
+      },
+      {
+        "jobDescription": "Formulate good design ideas and propose solutions to increased product usefulness"
+      }
+    ],
+    "skills": [
+      { "skill": "UI UX Design" },
+      { "skill": "Figma" },
+      { "skill": "UI Design" }
+    ],
+    "isFreelance": false,
+    "isNewer": true,
+    "image": "https://res.cloudinary.com/abdoerrahiem/image/upload/v1629513356/jobfinder/bukalapak_zadfhr.png",
+    "experience": "1-2 year"
+  },
+  {
+    "title": "UX Designer",
+    "positions": [
+      { "position": "Fulltime" },
+      { "position": "Junior" },
+      { "position": "Internship" }
+    ],
+    "company": "Blibli",
+    "location": "Bali",
+    "salary": 1200,
+    "companyDescription": "One of the pioneers of Indonesia online marketplace in the tech realm which has sold many hi-tech gadgets and innovative products since 2016",
+    "requirements": [
+      { "requirement": "You have excellent knowledge of UX and web design" },
+      { "requirement": "You know how developer works (additional points)" },
+      {
+        "requirement": "You have at least 3 years of experience in a similar role"
+      }
+    ],
+    "jobDescriptions": [
+      {
+        "jobDescription": "Implement and execute user testing and A/B testing"
+      },
+      {
+        "jobDescription": "Demonstrate your prototype / design results to user and stakeholder"
+      },
+      {
+        "jobDescription": "Formulate good design ideas and propose solutions to increased product usefulness"
+      }
+    ],
+    "skills": [
+      { "skill": "UI UX Design" },
+      { "skill": "Figma" },
+      { "skill": "UI Design" }
+    ],
+    "isFreelance": false,
+    "isNewer": true,
+    "image": "https://res.cloudinary.com/abdoerrahiem/image/upload/v1629513356/jobfinder/blibli_uc6amg.png",
+    "experience": "3 year"
+  },
+  {
+    "title": "HR Recruiter",
+    "positions": [{ "position": "Fulltime" }, { "position": "Senior" }],
+    "company": "Glints",
+    "location": "New York",
+    "salary": 1000,
+    "companyDescription": "One of the pioneers of Indonesia online marketplace in the tech realm which has sold many hi-tech gadgets and innovative products since 2016",
+    "requirements": [
+      { "requirement": "You have excellent knowledge of UX and web design" },
+      { "requirement": "You know how developer works (additional points)" },
+      {
+        "requirement": "You have at least 3 years of experience in a similar role"
+      }
+    ],
+    "jobDescriptions": [
+      {
+        "jobDescription": "Implement and execute user testing and A/B testing"
+      },
+      {
+        "jobDescription": "Demonstrate your prototype / design results to user and stakeholder"
+      },
+      {
+        "jobDescription": "Formulate good design ideas and propose solutions to increased product usefulness"
+      }
+    ],
+    "skills": [
+      { "skill": "UI UX Design" },
+      { "skill": "Figma" },
+      { "skill": "UI Design" }
+    ],
+    "isFreelance": true,
+    "isNewer": false,
+    "image": "https://res.cloudinary.com/abdoerrahiem/image/upload/v1629513358/jobfinder/glints_oyxhh1.png",
+    "experience": "2 year"
+  },
+  {
+    "title": "Software Engineer",
+    "positions": [{ "position": "Fulltime" }, { "position": "Internship" }],
+    "company": "LinkedIn",
+    "location": "London",
+    "salary": 1000,
+    "companyDescription": "One of the pioneers of Indonesia online marketplace in the tech realm which has sold many hi-tech gadgets and innovative products since 2016",
+    "requirements": [
+      { "requirement": "You have excellent knowledge of UX and web design" },
+      { "requirement": "You know how developer works (additional points)" },
+      {
+        "requirement": "You have at least 3 years of experience in a similar role"
+      }
+    ],
+    "jobDescriptions": [
+      {
+        "jobDescription": "Implement and execute user testing and A/B testing"
+      },
+      {
+        "jobDescription": "Demonstrate your prototype / design results to user and stakeholder"
+      },
+      {
+        "jobDescription": "Formulate good design ideas and propose solutions to increased product usefulness"
+      }
+    ],
+    "skills": [
+      { "skill": "UI UX Design" },
+      { "skill": "Figma" },
+      { "skill": "UI Design" }
+    ],
+    "isFreelance": true,
+    "isNewer": false,
+    "image": "https://res.cloudinary.com/abdoerrahiem/image/upload/v1629513358/jobfinder/linkedin_red6q6.png",
+    "experience": "1.5 year"
+  }
+]

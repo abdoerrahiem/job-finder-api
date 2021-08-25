@@ -1,0 +1,26 @@
+Users:
+- Register user
+- Login user
+- Update firstname and lastname
+- Update birthdate
+- Update email
+- Update password
+- Update photo
+
+Jobs:
+- Get jobs (get 4 jobs according to user location and get all jobs)
+- Get new posted jobs (get 4 jobs and get all new posted jobs)
+- Get jobs are freelancing
+- Get details job
+
+Bookmarks:
+- Get my bookmarks
+- Delete bookmark
+
+Application: 
+- Create application and create notification
+- Get my applications (status review, not-suitable, interview)
+- Get details application
+
+Notifications: 
+- Get my notifications
