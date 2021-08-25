@@ -2,6 +2,9 @@
   "name": "jobfinder",
   "version": "1.0.0",
   "description": "Job Finder is a platform for you who searching for job",
+  "engines": {
+    "node": "13.14.0"
+  },
   "main": "server.js",
   "scripts": {
     "start": "node server",
