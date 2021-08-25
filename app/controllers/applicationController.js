@@ -70,10 +70,6 @@ exports.getMyApplications = asyncHandler(async (req, res) => {
     .sort({ createdAt: -1 })
 
   res.json(applications)
-
-  io.on('connection', (socket) => {
-    console.log('a user connected')
-  })
 })
 
 exports.getApplication = asyncHandler(async (req, res) => {
