@@ -28,6 +28,11 @@ app.use('/jobs', require('./app/routes/jobs'))
 app.use('/applications', require('./app/routes/applications'))
 app.use('/notifications', require('./app/routes/notifications'))
 
+app.get('/payment/success', (req, res) => res.send())
+app.post('/payment/success', (req, res) => res.send())
+app.get('/payment/failed', (req, res) => res.send())
+app.post('/payment/failed', (req, res) => res.send())
+
 app.use(notFoundRoute)
 app.use(errorHandler)
 

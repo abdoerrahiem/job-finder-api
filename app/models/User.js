@@ -11,6 +11,7 @@ const userSchema = new mongoose.Schema(
     otp: { type: String, required: true },
     isValidated: { type: Boolean, default: false },
     notifToken: { type: String },
+    isPaid: { type: Boolean, default: false },
   },
   { timestamps: true }
 )

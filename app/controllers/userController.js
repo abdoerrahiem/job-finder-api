@@ -1,8 +1,10 @@
 const asyncHandler = require('express-async-handler')
 const otpGenerator = require('otp-generator')
+const midtransClient = require('midtrans-client')
 const User = require('../models/User')
 const sendEmail = require('../../utils/sendEmail')
 const generateToken = require('../../utils/generateToken')
+const schedule = require('node-schedule')
 
 exports.registeUser = asyncHandler(async (req, res) => {
   const { name, email, password } = req.body
@@ -99,6 +101,7 @@ exports.verifyUser = asyncHandler(async (req, res) => {
         birthdate: user.birthdate,
         photo: user.photo,
         notifToken: user.notifToken,
+        isPaid: user.isPaid,
       })
     }
   }
@@ -141,6 +144,7 @@ exports.loginUser = asyncHandler(async (req, res) => {
       birthdate: user.birthdate,
       photo: user.photo,
       notifToken: user.notifToken,
+      isPaid: user.isPaid,
     })
   } else {
     res.status(401)
@@ -167,6 +171,7 @@ exports.updateName = asyncHandler(async (req, res) => {
       birthdate: user.birthdate,
       photo: user.photo,
       notifToken: user.notifToken,
+      isPaid: user.isPaid,
     },
   })
 })
@@ -190,6 +195,7 @@ exports.updateBirthdate = asyncHandler(async (req, res) => {
       birthdate: user.birthdate,
       photo: user.photo,
       notifToken: user.notifToken,
+      isPaid: user.isPaid,
     },
   })
 })
@@ -217,6 +223,7 @@ exports.updateEmail = asyncHandler(async (req, res) => {
         birthdate: user.birthdate,
         photo: user.photo,
         notifToken: user.notifToken,
+        isPaid: user.isPaid,
       },
     })
   }
@@ -250,6 +257,7 @@ exports.updatePassword = asyncHandler(async (req, res) => {
         birthdate: user.birthdate,
         photo: user.photo,
         notifToken: user.notifToken,
+        isPaid: user.isPaid,
       },
     })
   }
@@ -274,6 +282,7 @@ exports.updatePhoto = asyncHandler(async (req, res) => {
       birthdate: user.birthdate,
       photo: user.photo,
       notifToken: user.notifToken,
+      isPaid: user.isPaid,
     },
   })
 })
@@ -294,5 +303,87 @@ exports.removeNotifToken = asyncHandler(async (req, res) => {
     birthdate: user.birthdate,
     photo: user.photo,
     notifToken: user.notifToken,
+    isPaid: user.isPaid,
+  })
+})
+
+exports.payment = asyncHandler(async (req, res) => {
+  const { orderId, amount, firstName, lastName, email, phone } = req.body
+
+  const snap = new midtransClient.Snap({
+    // Set to true if you want Production Environment (accept real transaction).
+    isProduction: false,
+    serverKey: process.env.MIDTRANS_SERVER_KEY,
+  })
+
+  const parameter = {
+    transaction_details: {
+      order_id: orderId,
+      gross_amount: amount,
+    },
+    credit_card: {
+      secure: true,
+    },
+    customer_details: {
+      first_name: firstName,
+      last_name: lastName,
+      email,
+      phone,
+    },
+  }
+
+  snap.createTransaction(parameter).then((transaction) => {
+    // transaction token
+    const transactionToken = transaction.token
+    // console.log('transactionToken:', transactionToken)
+    res.json(transactionToken)
+  })
+})
+
+exports.updateStatusUser = asyncHandler(async (req, res) => {
+  const user = await User.findById(req.user._id)
+
+  user.isPaid = true
+
+  await user.save()
+
+  const furuteDate = new Date(user.updatedAt)
+  furuteDate.setDate(furuteDate.getDate() + 30)
+
+  schedule.scheduleJob(futureDate, async () => {
+    user.isPaid = false
+    await user.save()
+  })
+
+  res.json({
+    success: true,
+    message: 'Your status has been changed to premium',
+    user: {
+      _id: user._id,
+      name: user.name,
+      email: user.email,
+      token: generateToken(user._id),
+      isValidated: user.isValidated,
+      birthdate: user.birthdate,
+      photo: user.photo,
+      notifToken: user.notifToken,
+      isPaid: user.isPaid,
+    },
+  })
+})
+
+exports.getCurrentUser = asyncHandler(async (req, res) => {
+  const user = await User.findById(req.user._id)
+
+  res.json({
+    _id: user._id,
+    name: user.name,
+    email: user.email,
+    token: generateToken(user._id),
+    isValidated: user.isValidated,
+    birthdate: user.birthdate,
+    photo: user.photo,
+    notifToken: user.notifToken,
+    isPaid: user.isPaid,
   })
 })

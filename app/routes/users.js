@@ -10,6 +10,9 @@ const {
   updatePassword,
   updatePhoto,
   removeNotifToken,
+  payment,
+  updateStatusUser,
+  getCurrentUser,
 } = require('../controllers/userController')
 const auth = require('../../middlewares/auth')
 
@@ -23,5 +26,8 @@ router.put('/update/email', auth, updateEmail)
 router.put('/update/password', auth, updatePassword)
 router.put('/update/photo', auth, updatePhoto)
 router.put('/update/token', auth, removeNotifToken)
+router.post('/payment', auth, payment)
+router.put('/update/status', auth, updateStatusUser)
+router.get('/me', auth, getCurrentUser)
 
 module.exports = router

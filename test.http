@@ -83,6 +83,31 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMjBiYjE3O
     "photo": "https://scontent.fpnk3-1.fna.fbcdn.net/v/t1.6435-9/56368677_836555680011041_1338138305639743488_n.jpg?_nc_cat=110&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeEfkPLAezFgH-sa1iSHcSPUikyRu5ecazaKTJG7l5xrNra_S6LDxXzjV4UCU6iwLUY65oR3uEbSDgzYHMROm9Q7&_nc_ohc=UBMMC4soiEwAX-4i4DV&_nc_ht=scontent.fpnk3-1.fna&oh=b62f1f3454f65fc220a0aa92db08be58&oe=61448C2C"
 }
 
+### Payment
+POST http://localhost:5000/users/payment
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMjM1ZDc4ZmIzZjRhMTY1NDE0NTllNCIsImlhdCI6MTYyOTk0MDk5NCwiZXhwIjoxNjMyNTMyOTk0fQ.2kfN3s0gNcoPScqZ91VWw2-zYCkhPI3OCbJd7hnIteI
+
+{
+    "orderId": "12345",
+    "amount": 50000,
+    "firstName": "Abdur",
+    "lastName": "Rahim",
+    "email": "abdoerrahiem@gmail.com",
+    "phone": "089694624299"
+}
+
+### Update status user
+PUT http://localhost:5000/users/update/status
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMjM1ZDc4ZmIzZjRhMTY1NDE0NTllNCIsImlhdCI6MTYyOTk0MDk5NCwiZXhwIjoxNjMyNTMyOTk0fQ.2kfN3s0gNcoPScqZ91VWw2-zYCkhPI3OCbJd7hnIteI
+
+
+### Payment success
+GET http://localhost:5000/payment/success
+
+### Payment failed
+GET http://localhost:5000/payment/failed
+
 
 // Jobs
 ### Get jobs
@@ -110,10 +135,19 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMjBiYjE3O
 ### Get my applications
 GET http://localhost:5000/applications
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMjM1ZDc4ZmIzZjRhMTY1NDE0NTllNCIsImlhdCI6MTYyOTc3MTU0MSwiZXhwIjoxNjMyMzYzNTQxfQ.eaCgxkatUCmJ-kjZTYaW_OWpz9kMdLnVbFrDQKt6LB0
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMjM1ZDc4ZmIzZjRhMTY1NDE0NTllNCIsImlhdCI6MTYyOTkzNjkxNCwiZXhwIjoxNjMyNTI4OTE0fQ.vfvhp_IZUtnMhDQs85Pt63O1YymLrD7WsymSlCbKL2w
 
 ### Get application
 GET http://localhost:5000/applications/6121fb05691836111cf3c15f
+
+### Update application
+PUT http://localhost:5000/applications/61266c1349ead90004e4aeea
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMjM1ZDc4ZmIzZjRhMTY1NDE0NTllNCIsImlhdCI6MTYyOTkzNjkxNCwiZXhwIjoxNjMyNTI4OTE0fQ.vfvhp_IZUtnMhDQs85Pt63O1YymLrD7WsymSlCbKL2w
+
+{
+    "status": "interview"
+}
 
 
 // Notifications
