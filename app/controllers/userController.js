@@ -2,7 +2,7 @@ const asyncHandler = require('express-async-handler')
 const otpGenerator = require('otp-generator')
 const midtransClient = require('midtrans-client')
 const User = require('../models/User')
-const sendEmail = require('../../utils/sendEmail')
+const sendGrid = require('../../utils/sendGrid')
 const generateToken = require('../../utils/generateToken')
 const schedule = require('node-schedule')
 
@@ -23,7 +23,7 @@ exports.registeUser = asyncHandler(async (req, res) => {
 
     user = await User.create({ name, email, password, otp })
 
-    await sendEmail({
+    sendGrid({
       email,
       subject: 'User Registration on Job Finder',
       text: `Your OTP is ${otp}`,
@@ -55,7 +55,7 @@ exports.sendOtp = asyncHandler(async (req, res) => {
 
     await user.save()
 
-    await sendEmail({
+    sendGrid({
       email,
       subject: 'User Registration on Job Finder',
       text: `Your OTP is ${otp}`,
@@ -86,7 +86,7 @@ exports.verifyUser = asyncHandler(async (req, res) => {
 
       await user.save()
 
-      sendEmail({
+      sendGrid({
         email,
         subject: 'Registration Success',
         text: 'Congratulations, your registration on Job Finder is successful',
@@ -124,7 +124,7 @@ exports.loginUser = asyncHandler(async (req, res) => {
 
       await user.save()
 
-      await sendEmail({
+      sendGrid({
         email,
         subject: 'User Registration on Job Finder',
         text: `Your OTP is ${otp}`,

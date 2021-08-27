@@ -7,8 +7,8 @@ Content-Type: application/json
 
 {
     "name": "Abdur Rahim",
-    "email": "abdoerrahiem@gmail.com",
-    "password": "123456"
+    "email": "abdoerrahiem2@gmail.com",
+    "password": "12345678"
 }
 
 ### Send OTP
@@ -33,8 +33,8 @@ POST http://localhost:5000/users/login
 Content-Type: application/json
 
 {
-    "email": "abdoerrahiem@gmail.com",
-    "password": "abdoerrahiem"
+    "email": "abdoerrahiem2@gmail.com",
+    "password": "12345678"
 }
 
 ### Update name
