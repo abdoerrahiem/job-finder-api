@@ -16,7 +16,7 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 
-// app.get('/', (req, res) => res.send('Welcome To Job Finder API'))
+app.get('/', (req, res) => res.send('Welcome To Job Finder API'))
 
 // fs.readdirSync('./app/routes').map((route) => {
 //   route = route.split('.')[0]
