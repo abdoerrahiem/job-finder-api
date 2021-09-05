@@ -1,4 +1,4 @@
-GET http://localhost:5000
+POST http://localhost:5000/applications/test
 
 // Users
 ### Register user
@@ -159,6 +159,56 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMjBiYjE3O
 PUT http://localhost:5000/notifications/6122021357f4101750e67ccb
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMjBiYjE3OTE2MTc1MTdiMDE5YzRjMiIsImlhdCI6MTYyOTYxNjI3OCwiZXhwIjoxNjMyMjA4Mjc4fQ.gJ_8oHYOPGz9Km2gKOZGBwm8H299A6p8VJKM4S1dYCE
 
+
+// Conversation
+### Create conversation
+POST http://localhost:5000/conversations
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMjc0ZDQwNzAxYjk5MjE1ODdmYWM1MSIsImlhdCI6MTYzMDM3MjQ3NiwiZXhwIjoxNjMyOTY0NDc2fQ.BocevLN5ungLXTNWXCsvmmNgP6lhxmSky9CGRLrDQEM
+
+{
+    "member": "6129e8bff36e2000041127b0"
+}
+
+### Get my conversations
+GET http://localhost:5000/conversations/me
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMjhkOTEzZTljMjc0MDAwNGIzZDUwMSIsImlhdCI6MTYzMDM3MzU4OCwiZXhwIjoxNjMyOTY1NTg4fQ.RYTvToL9RfC3hJQ0A72GEMxzRQyrLii7quO5azwkg5s
+
+// Message
+### Create message
+POST http://localhost:5000/messages/612d82d61c6867170c46ba59
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMjhkOTEzZTljMjc0MDAwNGIzZDUwMSIsImlhdCI6MTYzMDM3NDA4OCwiZXhwIjoxNjMyOTY2MDg4fQ.-Y6Wxz6vAV_3TfdtsSQHQyq57YeYsu0CH0xszsHA0gY
+
+{
+    "receiver": "61274d40701b9921587fac51",
+    "text": "I'm good, you?"
+}
+
+### get messages by conversation id
+GET http://localhost:5000/messages/612d82d61c6867170c46ba59
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMjhkOTEzZTljMjc0MDAwNGIzZDUwMSIsImlhdCI6MTYzMDM3NDA4OCwiZXhwIjoxNjMyOTY2MDg4fQ.-Y6Wxz6vAV_3TfdtsSQHQyq57YeYsu0CH0xszsHA0gY
+
+####
+POST https://fcm.googleapis.com/fcm/send
+Content-Type:application/json
+Authorization: key=AAAA4edFhXY:APA91bHYyxJNTU8Hp2pP3yW9IYWPXg_-A9BEXV3ua1kvfk4c-R7ayNsaN_CF10AzsoDuKjHDCLSpxRU3zh3UmJFgOs4ABOwFCJ3e44zWfy22KiIuuENxIAh9AdUOiM1D1MTlbUgptdwv
+
+{
+  "to": "deV8BdJnQ5GTAr34RfcHrv:APA91bGotM-r97Xwsdh_4h0NQ-bADo3yC-ivmiLEdKgKF5T3kpvWOndSMGG2A0KNosNkaqNAkve2wIXsYTGpQGJxyvlsEK8xxum7JLNAYzL357uvupJmOgSrRVkZLWqho5wpg51AwP9x",
+  "notification": {
+      "body": "Hello",
+      "title": "Title",
+      "image": "https://img.okezone.com/content/2021/09/01/45/2464287/resmi-gabung-manchester-united-unggah-foto-cristiano-ronaldo-pakai-jersey-kandang-WhMFKsW1QR.jpg",
+      "actions": [
+          {"title": "Like"},
+          {"title": "Comment"}
+      ]
+  },
+  "data": {
+      "type": "phone",
+  }
+}
 
 
 

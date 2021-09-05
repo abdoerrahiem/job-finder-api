@@ -12,6 +12,7 @@ const {
   removeNotifToken,
   payment,
   updateStatusUser,
+  updatePremiumUser,
   getCurrentUser,
 } = require('../controllers/userController')
 const auth = require('../../middlewares/auth')
@@ -28,6 +29,7 @@ router.put('/update/photo', auth, updatePhoto)
 router.put('/update/token', auth, removeNotifToken)
 router.post('/payment', auth, payment)
 router.put('/update/status', auth, updateStatusUser)
+router.put('/update/premium', auth, updatePremiumUser)
 router.get('/me', auth, getCurrentUser)
 
 module.exports = router

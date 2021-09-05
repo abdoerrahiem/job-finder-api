@@ -102,6 +102,7 @@ exports.verifyUser = asyncHandler(async (req, res) => {
         photo: user.photo,
         notifToken: user.notifToken,
         isPaid: user.isPaid,
+        isPremium: user.isPremium
       })
     }
   }
@@ -145,6 +146,7 @@ exports.loginUser = asyncHandler(async (req, res) => {
       photo: user.photo,
       notifToken: user.notifToken,
       isPaid: user.isPaid,
+      isPremium: user.isPremium
     })
   } else {
     res.status(401)
@@ -172,6 +174,7 @@ exports.updateName = asyncHandler(async (req, res) => {
       photo: user.photo,
       notifToken: user.notifToken,
       isPaid: user.isPaid,
+      isPremium: user.isPremium
     },
   })
 })
@@ -196,6 +199,7 @@ exports.updateBirthdate = asyncHandler(async (req, res) => {
       photo: user.photo,
       notifToken: user.notifToken,
       isPaid: user.isPaid,
+      isPremium: user.isPremium
     },
   })
 })
@@ -224,6 +228,7 @@ exports.updateEmail = asyncHandler(async (req, res) => {
         photo: user.photo,
         notifToken: user.notifToken,
         isPaid: user.isPaid,
+        isPremium: user.isPremium
       },
     })
   }
@@ -258,6 +263,7 @@ exports.updatePassword = asyncHandler(async (req, res) => {
         photo: user.photo,
         notifToken: user.notifToken,
         isPaid: user.isPaid,
+        isPremium: user.isPremium
       },
     })
   }
@@ -283,6 +289,7 @@ exports.updatePhoto = asyncHandler(async (req, res) => {
       photo: user.photo,
       notifToken: user.notifToken,
       isPaid: user.isPaid,
+      isPremium: user.isPremium
     },
   })
 })
@@ -304,6 +311,7 @@ exports.removeNotifToken = asyncHandler(async (req, res) => {
     photo: user.photo,
     notifToken: user.notifToken,
     isPaid: user.isPaid,
+    isPremium: user.isPremium
   })
 })
 
@@ -357,6 +365,31 @@ exports.updateStatusUser = asyncHandler(async (req, res) => {
 
   res.json({
     success: true,
+    message: 'Your status has been changed to paid',
+    user: {
+      _id: user._id,
+      name: user.name,
+      email: user.email,
+      token: generateToken(user._id),
+      isValidated: user.isValidated,
+      birthdate: user.birthdate,
+      photo: user.photo,
+      notifToken: user.notifToken,
+      isPaid: user.isPaid,
+      isPremium: user.isPremium
+    },
+  })
+})
+
+exports.updatePremiumUser = asyncHandler(async (req, res) => {
+  const user = await User.findById(req.user._id)
+
+  user.isPremium = true
+
+  await user.save()
+
+  res.json({
+    success: true,
     message: 'Your status has been changed to premium',
     user: {
       _id: user._id,
@@ -368,6 +401,7 @@ exports.updateStatusUser = asyncHandler(async (req, res) => {
       photo: user.photo,
       notifToken: user.notifToken,
       isPaid: user.isPaid,
+      isPremium: user.isPremium
     },
   })
 })
@@ -385,5 +419,6 @@ exports.getCurrentUser = asyncHandler(async (req, res) => {
     photo: user.photo,
     notifToken: user.notifToken,
     isPaid: user.isPaid,
+    isPremium: user.isPremium
   })
 })

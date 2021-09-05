@@ -12,6 +12,7 @@ const userSchema = new mongoose.Schema(
     isValidated: { type: Boolean, default: false },
     notifToken: { type: String },
     isPaid: { type: Boolean, default: false },
+    isPremium: { type: Boolean, default: false },
   },
   { timestamps: true }
 )
